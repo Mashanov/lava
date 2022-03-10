@@ -52,8 +52,9 @@ margin-bottom: 50px;
 }
 
 .lava, .actor {
-  background: #e55;
-  box-shadow: #e55 0 0 10px;
+background: url(https://matchcraft.timhoristjr.com/images/item_fluid_lava.gif);
+box-shadow: #ff6a00 0 0 10px;
+background-size: cover;
 }
 
 .wall {
@@ -72,6 +73,20 @@ background-position: 50%;
 	
 .sto {
 background: url(https://art.pixilart.com/bb7d32939b89497.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50%;
+}
+	
+dia {
+background: url(https://images-eds-ssl.xboxlive.com/image?url=z951ykn43p4FqWbbFvR2Ec.8vbDhj8G2Xe7JngaTToBrrCmIEEXHC9UNrdJ6P7KInFWvSpSRjZdv2hLMF4c4dcEyHyYx69Yj9e66GRbF9dd4UMOGNc4ZV4HMBV5fWbKL&format=png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50%;
+}
+
+iz {
+background: url(https://kartinkin.com/uploads/posts/2021-07/thumbs/1626162840_12-kartinkin-com-p-tekstura-rudi-mainkraft-krasivo-13.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: 50%;
@@ -206,8 +221,8 @@ var LEVELS = [
 		"x!!!!xxs    sxxxxxxzzzzzzzzxs!!sssxxxxxxxxxxxxxxxxxs                                           |    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"x!!!!xxs!!!!sxxxxxxxxxxxxxxxs!!!!sssxxxxxxxxxxxxxxxss!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"x!!!!xxs!!!!sssxxxxxxxxxxxxxxss!!!ssssssxxxxxxxxxxxxsssss!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"x!!!!xxssssssssssssxxxxxssssssssssssxxxxxxxxxxxxxxxxsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"xxxxxxxxsssssssssssssssssssssssssssssssssssssssssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxssssssspssssxxxxxsddsssssssssxxxxxxxxxxxxxxxxsxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"xxxxxxxxssssssssssssssssssssssssssssssssssssssssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	]
 ];
 
@@ -295,6 +310,8 @@ function Level (plan)
 			else if (ch === "x") fieldType = "wall";
 			else if (ch === "z") fieldType = "zell";
 			else if (ch === "s") fieldType = "sto";
+			else if (ch === "d") fieldType = "dia";
+			else if (ch === "p") fieldType = "iz";
 			else if (ch === "!") fieldType = "lava";
 			else if (ch === "|") fieldType = "lava";
 			else if (ch === "=") fieldType = "lava";
