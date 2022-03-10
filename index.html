@@ -100,6 +100,7 @@ background-position: 50%;
   background: #e2e838;
   border-radius: 50%;
   box-shadow: gold 0 0 7px;
+border: 1px solid #000;
 }
 
 .player {
@@ -107,6 +108,7 @@ box-shadow: unset;
 background: url(https://liubavyshka.ru/_ph/72/2/843712185.gif);
 background-size: cover;
 background-position: 50%;
+transform: scale3d(1.7, 1.7, 1.7);
 }
 
 .lost .player {
@@ -189,7 +191,7 @@ font-family: cursive;
 </head>
 <body>
 
-<h2>Подземелье</h2>
+<h2>Название игры</h2>
 <div id="menu">
 	<button id="play-game" onclick="this.parentNode.remove ()">Играть</button>
 	<button id="add-friends" onclick="VK.callMethod('showInviteBox')">
