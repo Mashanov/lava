@@ -61,6 +61,12 @@ margin-bottom: 50px;
   border: solid 3px #252222;
   box-sizing: content-box;
 }
+	
+.zell {
+background: green;
+border: solid 3px #252222;
+ box-sizing: content-box;
+}
 
 .actor {
   position: absolute;
@@ -187,7 +193,7 @@ var LEVELS = [
 		"x    xxx                                                               o                                                          x   x   x   x   x                   ",
 		"x    xxx                                    xxxxxxxx        o         xxx        o       o                                        x       x       x                   ",
 		"x!!!!xxx         @                 o  xxxxxxxxxxxxxx       xxx                   x       x            o     o                     x       x       x                   ",
-		"x!!!!xxx    xxxxxxx        xx!xxxxxxxxxxxxxxxxxxxxxx                                                xxxxxxxxxxxx!xx    =    xx!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxx    xxxzxxx        xx!xxxxxxxxxxxxxxxxxxxxxx                                                xxxxxxxxxxxx!xx    =    xx!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"x!!!!xxx    xxxxxxxxxxxxxxxxx!!xxxxxxxxxxxxxxxxxxxxx                                           |    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"x!!!!xxx!!!!xxxxxxxxxxxxxxxxx!!!!xxxxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"x!!!!xxx!!!!xxxxxxxxxxxxxxxxxxx!!!xxxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -278,6 +284,7 @@ function Level (plan)
 
 			if (Actor) this.actors.push(new Actor(new Vector(x, y), ch));
 			else if (ch === "x") fieldType = "wall";
+			else if (ch === "z") fieldType = "zell";
 			else if (ch === "!") fieldType = "lava";
 			else if (ch === "|") fieldType = "lava";
 			else if (ch === "=") fieldType = "lava";
