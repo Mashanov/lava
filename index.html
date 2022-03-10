@@ -57,15 +57,24 @@ margin-bottom: 50px;
 }
 
 .wall {
-  background: #2d2a2a;
-  border: solid 3px #252222;
-  box-sizing: content-box;
+background: url(https://i.pinimg.com/736x/0e/1f/c2/0e1fc2e…--custom-fabric-spoonflower.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 	
 .zell {
-background: green;
-border: solid 3px #252222;
- box-sizing: content-box;
+background: url(https://guides.eschoolnews.com/files/2021/07/Minecraft.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50%;
+}
+	
+.sto {
+background: url(https://art.pixilart.com/bb7d32939b89497.png);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 50%;
 }
 
 .actor {
@@ -193,13 +202,13 @@ var LEVELS = [
 		"                                                                                     x                          v             v       x       x                       ",
 		"                                                o                                                                       o             x       x                       ",
 		"x    xxx                                                               o                                                          x   x   x   x   x                   ",
-		"x    xxx                                    xxxxxxxx        o         xxx        o       o                                        x       x       x                   ",
-		"x!!!!xxx         @                 o  xxxxxxxxxxxxxx       xxx                   x       x            o     o                     x       x       x                   ",
-		"x!!!!xxx    zzzzzzz        xx!xxxxxxxxxxxxxxxxxxxxxx                                                xxxxxxxxxxxx!xx    =    xx!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"x!!!!xxx    xxxxxxxxxxxxxxxxx!!xxxxxxxxxxxxxxxxxxxxx                                           |    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"x!!!!xxx!!!!xxxxxxxxxxxxxxxxx!!!!xxxxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"x!!!!xxx!!!!xxxxxxxxxxxxxxxxxxx!!!xxxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-		"x!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x    xxx                                    zzzzzzzz        o         xxx        o       o                                        x       x       x                   ",
+		"x!!!!xxx         @                 o  zzzzzzxxxxxxxx       xxx                   x       x            o     o                     x       x       x                   ",
+		"x!!!!xxx    zzzzzzz        zs!szzzzzzzxxxxxxxxxxxxxx                                                xxxxxxxxxxxx!xx    =    xx!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxs    sxxxxxxzzzzzzzzxs!!ssxxxxxxxxxxxxxxxxxxx                                           |    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxs!!!!sxxxxxxxxxxxxxxxs!!!!ssxxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxs!!!!sxxxxxxxxxxxxxxxxss!!!ssxxxxxxxxxxxxxxxx!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+		"x!!!!xxssssssxxxxxxxxxxxxxxxxxssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 		"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 	]
 ];
@@ -287,6 +296,7 @@ function Level (plan)
 			if (Actor) this.actors.push(new Actor(new Vector(x, y), ch));
 			else if (ch === "x") fieldType = "wall";
 			else if (ch === "z") fieldType = "zell";
+			else if (ch === "s") fieldType = "sto";
 			else if (ch === "!") fieldType = "lava";
 			else if (ch === "|") fieldType = "lava";
 			else if (ch === "=") fieldType = "lava";
